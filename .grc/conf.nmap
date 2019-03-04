@@ -1,0 +1,45 @@
+#location: ~./grc
+
+# Scan Title
+regexp=Nmap scan report for (\S+)\s\(([^\)]+)\)
+colours=bold white
+-
+# up
+regexp=Host is (up)
+colours=default, bold green
+-
+# Failed to resolve
+regexp=Failed\sto\sresolve\s\"(\S+)\"
+colours=red,bold red
+-
+# Closed ports
+regexp=Not shown: (\d+)\s(closed|filtered)\sports
+colours=bold bright_red,red
+-
+# Titles
+regexp=^PORT.*$|^HOP.*
+colours=bold white
+-
+# Ports
+regexp=^(\d+)\/(\w+)\s+(\w+)\s+(\S+)
+colours=default,bold white,yellow,cyan,bold green
+-
+# Ports Details
+regexp=^\|_?(.*)
+colours=bold green,default
+-
+# Trace
+regexp=^\d+\s+(\d+\.\d+\sms)[^0-9]*(\d+\.\d+\.\d+\.\d+)
+colours=default,green,magenta
+-
+# Network Distance:
+regexp=Network Distance:\s(\d+)
+colours=default,bold green
+
+# open
+regexp=open
+colours=bold green
+
+# ip number                                                                                                                                
+regexp=\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}
+colours=bold yellow
